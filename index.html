@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="map.js" defer></script>
+    <style>
+
+    .page {
+        width: 1048px;
+        background-color: white;
+        margin: auto;
+        padding: 50px;
+        padding-top: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+
+    .hr3 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #DDD, transparent);
+    padding-top: 5px;
+    }
+
+
+    .vis-container {
+    width: 100%;
+    }
+
+
+    .description-left {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    }
+
+    .description-left h2 {
+        color: #1a5f7a;
+        border-bottom: 2px solid #1a5f7a;
+        padding-bottom: 10px;
+    }
+
+    .highlight {
+        background-color: #e6f3ff;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .emphasis {
+        color: #d35400;
+        font-weight: bold;
+    }
+
+    .date {
+        background-color: #f9e79f;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .region {
+        color: #2980b9;
+        font-style: italic;
+    }
+
+    .note {
+        background-color: #eaf2f8;
+        border-left: 4px solid #3498db;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul ul {
+        margin-top: 5px;
+    }
+
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+              
+                <div id="vis" class="vis-container"></div>
+              
+            </div>
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                    <h2><span class="highlight">Malaysian Districts Population</span></h2>
+                    <p>This visualization presents the <span class="emphasis">population distribution</span> across Malaysian districts from <span class="date">2020 to 2023</span>, revealing:</p>
+                    <ul>
+                        <li><strong>Demographic Shifts:</strong> Highlighting changes in population density.</li>
+                        <li><strong>Regional Variations:</strong> Showcasing differences between:
+                            <ul>
+                                <li class="region">Peninsular Malaysia</li>
+                                <li class="region">Sabah</li>
+                                <li class="region">Sarawak</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="note">Note: The color intensity represents population density, with darker shades indicating higher population concentrations.</p>
+                </div>
+            </div>
+          </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis2" class="vis-container"></div>
+            </div>
+
+        </div>
+
+        
+
+
+    </div>
+    
+
+    <!-- <div id="vis2" class="vis2"></div> -->
+    
+</body>
+</html>
